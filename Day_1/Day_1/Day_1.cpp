@@ -13,8 +13,9 @@ pair <vector<int>, vector<int>> get_input(string file_name)
 {
     ifstream input_data;
     input_data.open(file_name);
+
     if (!input_data) {
-        std::cerr << "Error: Unable to open the file.\n";
+        cerr << "Error: Unable to open the file.\n";
     }
 
     int fir_list, sec_list;
@@ -27,6 +28,7 @@ pair <vector<int>, vector<int>> get_input(string file_name)
         data_lists.second.push_back(sec_list);
     }
 
+    input_data.close();
     return data_lists;
 }
 
